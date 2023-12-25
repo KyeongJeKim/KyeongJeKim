@@ -20,12 +20,13 @@ Here are some ideas to get you started:
 -->
 
 <div id="badges">
-  <a href="www.linkedin.com/in/kjkim90">
+  <a href="www.linkedin.com/in/kjkim90/">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
-  <img src="https://komarev.com/ghpvc/?username=KyeongJekim&style=flat-square&color=blue" alt=""/>
-  </a>
 </div>
+
+<img src="https://komarev.com/ghpvc/?username=KyeongJekim&style=flat-square&color=blue" alt=""/>
+
 <!-- > -->
 
 <div id="header" align="left">
