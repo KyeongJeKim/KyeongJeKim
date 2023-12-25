@@ -38,16 +38,10 @@ Here are some ideas to get you started:
 
 ### :technologist: About Me
 
------
 
-### :fire: My Stats
+---
 
-[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=KyeongJeKim&theme=dark&type=png)](https://git.io/streak-stats)
-
-### :surfer: Most Used
-
-[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KyeongJeKim&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
-
+### :hammer_and_wrench: Languages and Tools :
 <div>
   <img src="https://github.com/microsoft/PowerBI-Icons/blob/main/SVG/Excel-Workbook.svg" title="Excel" alt="Excel" width="40" height="40"/>&nbsp;
   <img src="https://github.com/microsoft/PowerBI-Icons/blob/main/SVG/Power-BI.svg" title="Power BI" alt="Power BI" width="40" height="40"/>&nbsp;
@@ -57,3 +51,13 @@ Here are some ideas to get you started:
   <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original-wordmark.svg" title="PostgreSQL" alt="PostgreSQL" width="40" height="40"/>&nbsp;
   <img src="https://github.com/devicons/devicon/blob/master/icons/github/github-original-wordmark.svg" title="GitHub" **alt="GitHub" width="40" height="40"/>
 </div>
+
+-----
+
+### :fire: My Stats
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=KyeongJeKim&theme=dark&type=png)](https://git.io/streak-stats)
+
+### :surfer: Most Used
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KyeongJeKim&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
