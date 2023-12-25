@@ -1,7 +1,12 @@
+### Hi there 👋
+
+
 <!--
 **KyeongJeKim/KyeongJeKim** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
+- WEB
+- https://www.sitepoint.com/github-profile-readme/
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
@@ -28,4 +33,16 @@ Here are some ideas to get you started:
   </a>
 </div>
 
-### Hi there 👋
+---
+
+### :technologist: About Me
+
+-----
+
+### :fire: My Stats:
+
+[![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=KyeongJeKim&theme=dark&type=png)](https://git.io/streak-stats)
+
+### :surfer: Top Languages
+
+[![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KyeongJeKim&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
