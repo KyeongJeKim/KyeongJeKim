@@ -63,3 +63,5 @@ Here are some ideas to get you started:
 ### :surfer: Most Used
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KyeongJeKim&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+
+![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=KyeongJeKim&show_icons=true&theme=dark)
