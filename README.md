@@ -7,6 +7,7 @@
 Here are some ideas to get you started:
 - WEB
 - https://www.sitepoint.com/github-profile-readme/
+- https://github-readme-streak-stats.herokuapp.com/demo/
 
 - 🔭 I’m currently working on ...
 - 🌱 I’m currently learning ...
@@ -39,10 +40,20 @@ Here are some ideas to get you started:
 
 -----
 
-### :fire: My Stats:
+### :fire: My Stats
 
 [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com?user=KyeongJeKim&theme=dark&type=png)](https://git.io/streak-stats)
 
-### :surfer: Top Languages
+### :surfer: Most Used
 
 [![Top Langs](https://github-readme-stats.vercel.app/api/top-langs/?username=KyeongJeKim&layout=compact&theme=vision-friendly-dark)](https://github.com/anuraghazra/github-readme-stats)
+
+<div>
+  <img src="https://github.com/microsoft/PowerBI-Icons/blob/main/SVG/Excel-Workbook.svg" title="Excel" alt="Excel" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/microsoft/PowerBI-Icons/blob/main/SVG/Power-BI.svg" title="Power BI" alt="Power BI" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/rstudio/rstudio-original.svg" title="R" alt="R" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/microsoftsqlserver/microsoftsqlserver-plain-wordmark.svg" title="MSSQL" alt="MSSQL" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/mysql/mysql-original-wordmark.svg" title="MySQL" alt="MySQL" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/postgresql/postgresql-original-wordmark.svg" title="PostgreSQL" alt="PostgreSQL" width="40" height="40"/>&nbsp;
+  <img src="https://github.com/devicons/devicon/blob/master/icons/github/github-original-wordmark.svg" title="GitHub" **alt="GitHub" width="40" height="40"/>
+</div>
