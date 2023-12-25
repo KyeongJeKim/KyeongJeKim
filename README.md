@@ -1,5 +1,3 @@
-### Hi there 👋
-
 <!--
 **KyeongJeKim/KyeongJeKim** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
@@ -19,13 +17,15 @@ Here are some ideas to get you started:
   <a href="www.linkedin.com/in/kjkim90">
     <img src="https://img.shields.io/badge/LinkedIn-blue?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn Badge"/>
   </a>
+  <img src="https://komarev.com/ghpvc/?username=KyeongJekim&style=flat-square&color=blue" alt=""/>
+  </a>
 </div>
-
 <!-- > -->
 
 <div id="header" align="left">
-  <a href="www.linkedin.com/in/kjkim90">
-    <img src="https://media.giphy.com/media/LWJ7cKyiWPCnVyuAhT/giphy.gif" width=auto/>
+    <img src="https://media.giphy.com/media/LWJ7cKyiWPCnVyuAhT/giphy.gif" width="250"/>
 <!--   <img src="https://media.giphy.com/media/M9gbBd9nbDrOTu1Mqx/giphy.gif" width=auto/> -->
   </a>
 </div>
+
+### Hi there 👋
