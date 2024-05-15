@@ -1,0 +1,159 @@
+---
+title: "ML example"
+author: "Kyeong Je Kim"
+date: "`r Sys.Date()`"
+output: html_document
+---
+
+
+### library load
+```{r}
+library(ggplot2)
+library(keras)
+library(tensorflow)
+library(dplyr)
+```
+
+### Data pulling (example iris)
+```{r}
+data(iris)
+head(iris) # head check
+str(iris) # data check
+```
+
+### browsing data thru plot
+```{r}
+ggplot(iris, aes(x = Sepal.Length)) + 
+  geom_histogram(binwidth = 0.4) +
+  theme_classic()
+```
+### missing data pre-processing
+```{r}
+sum(is.na(iris))
+```
+
+### missing data pre-processing cont. 1
+```{r}
+# data scaling
+iris_scaled <- as.data.frame(scale(iris[, -5]))
+
+# parameter encoding
+iris_scaled$Species <- iris$Species
+```
+
+### missing data pre-processing cont. 2
+```{r}
+# data split
+set.seed(777)
+train_index <- sample(1:nrow(iris_scaled), 0.8 * nrow(iris_scaled))
+train_data <- iris_scaled[train_index,]
+test_data <- iris_scaled[-train_index,]
+```
+
+### data size check
+```{r}
+dim(train_data)
+dim(test_data)
+```
+
+### Data prep
+```{r}
+data("airquality")
+df <- airquality %>%
+  na.omit() %>%
+  mutate(Month = as.numeric(Month), Day = as.numeric(Day))
+```
+
+### Data scaling
+```{r}
+# scaled
+scaled_df <- as.data.frame(scale(df))
+```
+
+### Data pre-processing for LSTM model
+```{r}
+create_dataset <- function(data, time_steps) {
+  X <- array(NA, dim = c(nrow(data) - time_steps, time_steps, ncol(data)))
+  y <- array(NA, dim = c(nrow(data) - time_steps, 1))
+  
+  for (i in 1:(nrow(data) - time_steps)) {
+    X[i,,] <- as.matrix(data[i:(i + time_steps - 1), ])
+    y[i] <- data[i + time_steps, "Ozone"]
+  }
+  list(X = X, y = y)
+}
+
+# Time steps assign
+time_steps <- 10
+dataset <- create_dataset(scaled_df, time_steps)
+
+# dataset view
+str(dataset)
+```
+
+### Data spliting
+```{r}
+X <- dataset$X
+y <- dataset$y
+
+# training test
+set.seed(777)
+train_size <- floor(0.8 * nrow(X))
+train_X <- X[1:train_size,,]
+train_y <- y[1:train_size]
+
+test_X <- X[(train_size + 1):nrow(X),,]
+test_y <- y[(train_size + 1):nrow(X)]
+
+# Create Model
+model <- keras_model_sequential() %>%
+  layer_lstm(units = 50, return_sequences = TRUE, input_shape = c(time_steps, ncol(scaled_df))) %>%
+  layer_lstm(units = 50, return_sequences = FALSE) %>%
+  layer_dense(units = 1)
+
+# Model compile
+model %>% compile(
+  loss = 'mean_squared_error',
+  optimizer = 'adam'
+)
+
+# Model training
+history <- model %>% fit(
+  train_X, train_y,
+  epochs = 100,
+  batch_size = 32,
+  validation_data = list(test_X, test_y),
+  verbose = 2,
+  shuffle = FALSE
+)
+```
+
+```{r}
+# prediction
+predicted_ozone <- model %>% predict(test_X)
+```
+
+```{r}
+
+# Convert to original scale
+predicted_ozone <- predicted_ozone * attr(scaled_df, "scaled:scale")["Ozone"] + attr(scaled_df, "scaled:center")["Ozone"]
+actual_ozone <- test_y * attr(scaled_df, "scaled:scale")["Ozone"] + attr(scaled_df, "scaled:center")["Ozone"]
+
+# RMSE 
+rmse <- sqrt(mean((predicted_ozone - actual_ozone)^2))
+print(paste("RMSE:", rmse))
+
+# plot
+results <- data.frame(date = 1:length(actual_ozone),
+                      actual_ozone = actual_ozone,
+                      predicted_ozone = predicted_ozone)
+
+ggplot(results, aes(x = date)) +
+  geom_line(aes(y = actual_ozone), color = "blue") +
+  geom_line(aes(y = predicted_ozone), color = "red") +
+  labs(title = "Actual vs Predicted Ozone Levels", y = "Ozone", x = "Date")
+
+```
+
+
+
